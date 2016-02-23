@@ -30,7 +30,6 @@ function Import-Excel {
 
     Process {
 
-        $Path = (Resolve-Path $Path).Path
         write-debug "target excel file $Path"
 
         $stream = New-Object -TypeName System.IO.FileStream -ArgumentList $Path,"Open","Read","ReadWrite"
